@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f2">
+  <meta name="description" content="Continuum Care. Care that stays connected.">
+  <title>Continuum Care</title>
+  <style>
+    :root { color-scheme: light; --ink: #173c32; --paper: #f5f7f2; --line: #d7dfd5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.55 system-ui, sans-serif; }
+    .shell { width: min(100% - 3rem, 78rem); margin-inline: auto; }
+    header { min-height: 5.5rem; display: flex; align-items: center; border-bottom: 1px solid var(--line); }
+    .brand { display: inline-flex; align-items: center; gap: .65rem; font-weight: 650; }
+    .mark { width: 2rem; height: 1.2rem; position: relative; }
+    .mark::before, .mark::after { content: ""; position: absolute; width: 1.1rem; height: 1.1rem; border: 2px solid currentColor; border-radius: 50%; top: 0; }
+    .mark::before { left: 0; }
+    .mark::after { right: 0; }
+    main { min-height: calc(100svh - 10rem); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 6rem); align-items: center; padding-block: clamp(2.5rem, 8vw, 7rem); }
+    h1 { margin: 0; font: 400 clamp(3.3rem, 8.4vw, 8rem)/.88 Georgia, serif; letter-spacing: -.07em; }
+    h1 span { display: block; }
+    p { margin: 1.65rem 0 0; font-size: clamp(1.1rem, 2.3vw, 1.55rem); color: #3e5d52; }
+    .art { aspect-ratio: 1.12; position: relative; overflow: hidden; border-radius: 1.25rem; background: #183e34; isolation: isolate; }
+    .loop { position: absolute; inset: 16% auto auto 19%; width: 54%; aspect-ratio: 1; border: clamp(1rem, 4vw, 4rem) solid #cbdcae; border-radius: 50%; transform: rotate(-38deg) scaleX(.83); }
+    .loop + .loop { inset: 35% auto auto 34%; border-color: #79b998; mix-blend-mode: screen; }
+    footer { border-top: 1px solid var(--line); padding-block: 1.3rem; color: #3e5d52; font-size: .875rem; }
+    @media (max-width: 720px) {
+      main { grid-template-columns: 1fr; min-height: auto; }
+      .art { aspect-ratio: 1.35; }
+      .loop { width: 48%; left: 23%; top: 12%; }
+      .loop + .loop { left: 37%; top: 29%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell">
+    <span class="brand"><span class="mark" aria-hidden="true"></span>Continuum Care</span>
+  </header>
+  <main class="shell">
+    <div>
+      <h1>Continuum <span>Care</span></h1>
+      <p>Care that stays connected.</p>
+    </div>
+    <div class="art" aria-hidden="true"><div class="loop"></div><div class="loop"></div></div>
+  </main>
+  <footer class="shell">Continuum Care</footer>
+</body>
+</html>
